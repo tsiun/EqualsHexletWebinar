@@ -14,14 +14,15 @@ calculate.textContent = `${firstNumber} * ${secondNumber}`;
 
 check.addEventListener('click', () => {
     if ((firstNumber * secondNumber) === Number(input.value)) {
-        alert('Congadulation, your answer right!');
+      check.style.backgroundColor = "green";  
+      alert('Congadulation, your answer right!');
       
       firstNumber = getRandomNumber(1, 9);
       secondNumber = getRandomNumber(1, 9);
       calculate.textContent = `${firstNumber} * ${secondNumber}`;
-      check.style.backgroundColor = "green";
 
     } else {
+      check.style.backgroundColor = "red";
       alert("wrong! don't cry babe, just try again :) ");
     }
   
